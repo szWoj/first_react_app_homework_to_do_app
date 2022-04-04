@@ -34,8 +34,8 @@ function App() {
 
   const taskNodes = tasks.map((item, index) => {
     return (
-      <li key={index}>
-        <span>Task: {item.task} Priority: {item.priority}</span><br></br>
+      <li key={index} className={item.priority ==='high' ? 'high-priority': 'low-priority'}>
+        <span>Task: <b>{item.task}</b> Priority: <b>{item.priority}</b></span><br></br>
       </li>
     )
   })
@@ -77,7 +77,7 @@ export default App;
 
 
 
-
+//MVP SOLUTION
 
 // import logo from './logo.svg';
 // import './App.css';
